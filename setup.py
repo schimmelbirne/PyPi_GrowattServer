@@ -1,12 +1,15 @@
 import setuptools
+import os
 
+tag = os.environ['LATEST_TAG']
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="growattServer",
-    version="0.0.1",
+    version=tag,
     author="IndyKoning",
+    author_email="indykoningnl@gmail.com",
     description="A package to talk to growatt server",
     long_description=long_description,
     long_description_content_type="text/markdown",
